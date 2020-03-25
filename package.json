@@ -1,0 +1,32 @@
+{
+  "name": "vizceral-svelte",
+  "version": "0.0.1",
+  "description": "Svelte wrapper around Vizceral.",
+  "keywords": [
+		"svelte",
+    "vizceral",
+    "webgl",
+    "traffic",
+    "graph",
+    "visualization"
+	],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "svelte": "src/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "author": "Daniel González Lopes <danielgonzalezlopes@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^2.2.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^5.1.1",
+    "svelte": "^3.20.1",
+    "vizceral": "^4.9.0"
+  },
+  "dependencies": {
+    "vizceral": "^4.9.0"
+  }
+}
