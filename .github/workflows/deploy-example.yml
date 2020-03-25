@@ -1,0 +1,26 @@
+name: Deploy vizceral-example
+
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./example  
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - run: npm install
+        working-directory: ${{env.working-directory}}
+      - run: npm run build
+        working-directory: ${{env.working-directory}}
+      - name: Deploy to vizceral-svelte-example.surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'vizceral-svelte-example.surge.sh'
+          project: './example/public'
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
