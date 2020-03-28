@@ -1,7 +1,11 @@
 {
   "name": "vizceral-svelte",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Svelte wrapper around Vizceral.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dgzlopes/vizceral-svelte.git"
+  },
   "keywords": [
 		"svelte",
     "vizceral",
